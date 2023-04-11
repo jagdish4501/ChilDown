@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: linear-gradient(-90deg, #2e72ed, #e5a1ed);
+  font-family: sans-serif;
+}
+/* about us css */
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+}
+
+.team-member {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin: 30px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+  background-color:black;
+}
+
+.team-member h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+
+  
+
+  /* navbar css */
+  nav {
+    background: linear-gradient(90deg, #2e72ed, #e5a1ed);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    cursor: pointer;
+    color: black;
+  }
+  
+  nav ul:last-child li {
+    margin-right: 0;
+  }
+  
+  nav ul:last-child li img {
+    height: 80px;
+    width: 80px;
+    background: #2e72ed;
+    border-radius: 50%;
+    margin: 0 10px;
+    
+  }

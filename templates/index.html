@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chill-Down</title>
+  <link rel="stylesheet" type="text/css" , href="{{url_for('static', filename='styles/index.css')}}">
+
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/">ChillDown</a></li>
+      <li><a href="/AboutUs">About Us</a></li>
+      <li><a href="/">Our Vision</a></li>
+      <li><a href="/">Login</a></li>
+    </ul>
+    <ul>
+      <li>
+
+        <a href="/"><img src="https://cdn.pixabay.com/photo/2015/09/19/19/41/girl-947617__340.png" alt="Login"></a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="headline">
+    <h1>Know Your Mental Health...</h1>
+  </div>
+
+  <div class="route" style="margin: 30px ;">
+    <h3>Give a short quiz to analyze your mental health</h3>
+    <a href="/predict">
+      <button type="button" class="btn">Quiz</button>
+    </a>
+  </div>
+
+  <div class="route" style="margin: 30px ;">
+    <h3>Want a Quick Assessment? Upload your Conversation:</h3>
+    <a href="/describe">
+      <button type="button" class="btn">Describe Yourself</button>
+    </a>
+  </div>
+
+  <div class="route" style="margin: 30px ;">
+    <h3> Upload your Audio:For Sentiment analysis</h3>
+    <input type="file" id="recordedAudio" accept="audio/*">
+    <br>
+    <h3>startRecording : For Sentiment analysis</h3>
+    <button onclick="startRecording()" class="btn">Start Recording</button>
+    <button onclick="stopRecording()" class="btn">Stop Recording</button>
+    <br>
+    <audio id="recordedAudio" controls></audio>
+  </div>
+
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+      </div>
+
+      <div class="box">
+        <h3>our services</h3>
+        <a href="#"> <i class="fas fa-chevron-right"></i> xxxxxxx xx </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> xxxxxxx xx </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> xxxxxxx xx </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> xxxxxxx xx </a>
+        <a href="#"> <i class="fas fa-chevron-right"></i> xxxxxxx xx </a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#"> <i class="fas fa-phone"></i> +91 8726554352</a>
+        <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+        <a href="mailto:kjagdish5796@gmail.com"> <i class="fas fa-envelope"></i> kjagdish5796@gmail.com </a>
+        <a href="mailto:Xxxx@gmail.com "> <i class="fas fa-envelope"></i> Xxxx@gmail.com </a>
+        <a href="https://academics.mnnit.ac.in/new"> <i class="fas fa-map-marker-alt"></i> MNNIT,Uttar Pradesh India</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <a href="https://twitter.com/mnnitalld?lang=en"> <i class="fab fa-twitter"></i> twitter </a>
+        <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+      </div>
+
+    </div>
+
+    <div class="credit"> created by <span style="color: chocolate;">Init_0 Teams</span> | all rights reserved </div>
+
+  </section>
+
+  <!-- footer section ends -->
+
+
+
+
+
+
+  <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+</body>
+
+</html>

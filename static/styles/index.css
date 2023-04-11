@@ -1,0 +1,127 @@
+nav {
+    background: linear-gradient(90deg, #2e72ed, #e5a1ed);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    cursor: pointer;
+    color: black;
+  }
+  
+  nav ul:last-child li {
+    margin-right: 0;
+  }
+  
+  nav ul:last-child li img {
+    height: 80px;
+    width: 80px;
+    background: #2e72ed;
+    border-radius: 50%;
+    margin: 0 10px;
+    
+  }
+
+
+
+  /* above in navbar css */
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: linear-gradient(-90deg, #2e72ed, #e5a1ed);
+    font-family: sans-serif;
+}
+
+.headline{
+    text-align: center;
+}
+
+.btn{
+    background-color: green;
+    height: 50px;
+    width: 150px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+#recordedAudio {
+    padding: 10px;
+    border: 2px solid #ccc;
+    background:linear-gradient(90deg, #2e72ed, #e5a1ed);
+  }
+
+
+  /* Footer section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer .box {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .footer .box h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .footer .box a {
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .footer .box a:hover {
+    color: #208730;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .box a i {
+    margin-right: 10px;
+  }
+  
+  .footer .credit {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .footer .credit span {
+    font-weight: bold;
+  }
