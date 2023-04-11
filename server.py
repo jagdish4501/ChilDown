@@ -5,10 +5,6 @@ import joblib
 import json
 import cherrypy
 import os
-import ast
-from dotenv import load_dotenv
-# load environment variables from .env file
-load_dotenv()
 # load blog from api
 blog = []
 with open('blog.json') as f:
@@ -25,16 +21,44 @@ count_vectorizer = joblib.load('ML_Model/cnt_vec.pkl')
 
 
 # minimum attribute value in svm_model
-mn = ast.literal_eval(os.environ.get('Min'))
-
+mn = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1]
 # differece of max and min attribute value
-dif = ast.literal_eval(os.environ.get('Diff'))
+dif = [5, 10, 10, 10, 10, 10, 5, 1, 10,
+       10, 9, 10, 9, 10, 10, 1, 10, 10, 10, 1]
 
 # bare minimum condition
-bare_min = ast.literal_eval(os.environ.get('Bare_Min'))
+bare_min = [2, 2, 3, 3, 4, 2, 1, 1, 4, 1, 3, 1, 6, 0, 1, 1, 3, 1, 4, 0]
 
-#
-CauseOfDepresion = ast.literal_eval(os.environ.get('Leval_dep'))
+Attribute = {
+    0: "FRUITS_VEGGIES",
+    1: "PLACES_VISITED",
+    2: "CORE_CIRCLE",
+    3: "SUPPORTING_OTHERS",
+    4: "ACHIEVEMENT",
+    5: "SOCIAL_NETWORK",
+    6: "DONATION",
+    7: "BMI_RANGE",
+    8: "TODO_COMPLETED",
+    9: "FLOW",
+    10: "DAILY_STEPS",
+    11: "LIVE_VISION",
+    12: "SLEEP_HOURS",
+    13:  "LOST_VACATION",
+    14: "DAILY_SHOUTING",
+    15: "SUFFICIENT_INCOME",
+    16: "PERSONAL_AWARDS",
+    17: "TIME_FOR_PASSION",
+    18: "WEEKLY_MEDITATION",
+    19: "WORK_LIFE_BAL"}
+
+CauseOfDepresion = {0: "Finanacial issue",
+                    1: "Sleep Cycle Disturbance",
+                    2: "Delay in Goals",
+                    3: "Lack of Achievement",
+                    4: "Introvert/less Socialise",
+                    5: "Poor Relationships",
+                    6: "Diet",
+                    7: "Lack of Concentration"}
 
 
 @app.route('/chilDown')
