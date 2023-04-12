@@ -3,8 +3,6 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import joblib
 import json
-import cherrypy
-import os
 # load blog from api
 blog = []
 with open('blog.json') as f:
@@ -39,7 +37,6 @@ CauseOfDepresion = {0: "Finanacial issue",
                     7: "Lack of Concentration"}
 
 
-@app.route('/chilDown')
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -96,25 +93,6 @@ def AboutUs():
     else:
         return 'methode not allowed'
 
-    # cherrypy code
 
-
-class EmbeddedApp(object):
-    def __init__(self, app):
-        self.app = app
-
-    def __call__(self, environ, start_response):
-        return self.app(environ, start_response)
-
-
-# (your Flask routes and other code remain the same)
 if __name__ == "__main__":
-    cherrypy.config.update({
-        'server.socket_port': 5000,
-    })
-    cherrypy.tree.graft(EmbeddedApp(app), '/')
-    cherrypy.engine.start()
-    cherrypy.engine.block()
-
-# if __name__ == "__main__":
-#     app.run(port=5000)
+    app.run(port=5000)
