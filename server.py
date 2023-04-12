@@ -108,14 +108,13 @@ class EmbeddedApp(object):
 
 
 # (your Flask routes and other code remain the same)
-# if __name__ == "__main__":
-#     cherrypy.config.update({
-#         'server.socket_host': '0.0.0.0',
-#         'server.socket_port': 5000,
-#     })
-#     cherrypy.tree.graft(EmbeddedApp(app), '/')
-#     cherrypy.engine.start()
-#     cherrypy.engine.block()
-
 if __name__ == "__main__":
-    app.run(port=5000)
+    cherrypy.config.update({
+        'server.socket_port': 5000,
+    })
+    cherrypy.tree.graft(EmbeddedApp(app), '/')
+    cherrypy.engine.start()
+    cherrypy.engine.block()
+
+# if __name__ == "__main__":
+#     app.run(port=5000)
