@@ -29,28 +29,6 @@ dif = [5, 10, 10, 10, 10, 10, 5, 1, 10,
 # bare minimum condition
 bare_min = [2, 2, 3, 3, 4, 2, 1, 1, 4, 1, 3, 1, 6, 0, 1, 1, 3, 1, 4, 0]
 
-Attribute = {
-    0: "FRUITS_VEGGIES",
-    1: "PLACES_VISITED",
-    2: "CORE_CIRCLE",
-    3: "SUPPORTING_OTHERS",
-    4: "ACHIEVEMENT",
-    5: "SOCIAL_NETWORK",
-    6: "DONATION",
-    7: "BMI_RANGE",
-    8: "TODO_COMPLETED",
-    9: "FLOW",
-    10: "DAILY_STEPS",
-    11: "LIVE_VISION",
-    12: "SLEEP_HOURS",
-    13:  "LOST_VACATION",
-    14: "DAILY_SHOUTING",
-    15: "SUFFICIENT_INCOME",
-    16: "PERSONAL_AWARDS",
-    17: "TIME_FOR_PASSION",
-    18: "WEEKLY_MEDITATION",
-    19: "WORK_LIFE_BAL"}
-
 CauseOfDepresion = {0: "Finanacial issue",
                     1: "Sleep Cycle Disturbance",
                     2: "Delay in Goals",
@@ -130,11 +108,14 @@ class EmbeddedApp(object):
 
 
 # (your Flask routes and other code remain the same)
+# if __name__ == "__main__":
+#     cherrypy.config.update({
+#         'server.socket_host': '0.0.0.0',
+#         'server.socket_port': 5000,
+#     })
+#     cherrypy.tree.graft(EmbeddedApp(app), '/')
+#     cherrypy.engine.start()
+#     cherrypy.engine.block()
+
 if __name__ == "__main__":
-    cherrypy.config.update({
-        'server.socket_host': '0.0.0.0',
-        'server.socket_port': 5000,
-    })
-    cherrypy.tree.graft(EmbeddedApp(app), '/')
-    cherrypy.engine.start()
-    cherrypy.engine.block()
+    app.run(port=5000)
